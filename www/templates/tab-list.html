@@ -1,0 +1,22 @@
+<ion-view title="Image Feed">
+    <ion-nav-buttons side="left">
+        <button class="button" ng-click="doSomeAction()">
+            Do Something
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button" ng-click="doLogout()">
+            Logout
+        </button>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-list can-swipe="true">
+            <ion-item class="item item-thumbnail-left" ng-repeat="data in dataList" type="item-text-wrap"
+                      href="#/tab/list/{{data.id}}">
+                <ion-option-button class="button-assertive" ng-click="doDeleteRow(data.id)">
+                    DELETE
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
