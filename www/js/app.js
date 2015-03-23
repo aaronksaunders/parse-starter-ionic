@@ -21,8 +21,8 @@ angular.module('starter',
  * parse constants
  */
     .value('ParseConfiguration', {
-        applicationId: "xxxxxxxxxxxxx",
-        javascriptKey: "yyyyyyyyyyyyy"
+        applicationId: "xxxxxxxx",
+        javascriptKey: "yyyyyyyyy"
     })
 /**
  *
@@ -58,34 +58,6 @@ angular.module('starter',
                     user: function (UserService) {
                         var value = UserService.init();
                         return value;
-                    },
-                    /**
-                     * This function will initialize parse before executing the code to render the
-                     * home tab view
-                     *
-                     * It will resolve successfully if you are using parse or not
-                     *
-                     * @param $q
-                     * @param $timeout
-                     * @param ParseConfiguration
-                     * @returns {*}
-                     */
-                    usingParse: function ($q, $timeout, ParseConfiguration) {
-
-                        if (ParseConfiguration.initialized) {
-                            return ParseConfiguration.USING_PARSE;
-                        }
-
-                        if (ParseConfiguration.applicationId && ParseConfiguration.javascriptKey) {
-                            console.log("parse initialize");
-                            Parse.initialize(ParseConfiguration.applicationId, ParseConfiguration.javascriptKey);
-                        } else {
-                            ParseConfiguration.USING_PARSE = false
-                        }
-
-                        ParseConfiguration.initialized = true;
-                        return ParseConfiguration.USING_PARSE;
-
                     }
                 }
             })

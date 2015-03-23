@@ -5,18 +5,17 @@
  */
 angular.module('app.controllers', [])
     .controller('ListDetailCtrl', [
-        '$state', '$scope', 'UserService',   // <-- controller dependencies
-        function ($state, $scope, UserService) {
+        '$state', '$scope', '$stateParams', 'UserService',   // <-- controller dependencies
+        function ($state, $scope, $stateParams, UserService) {
 
-            debugger;
-
+            $scope.index = $stateParams.itemId;
 
         }])
     .controller('ListCtrl', [
         '$state', '$scope', 'UserService',   // <-- controller dependencies
         function ($state, $scope, UserService) {
 
-            debugger;
+            $scope.dataList = ["One", "Two", "Three"];
 
 
         }])
@@ -25,6 +24,9 @@ angular.module('app.controllers', [])
         function ($state, $scope, UserService) {
 
             debugger;
+            UserService.currentUser().then(function (_user) {
+                $scope.user = _user;
+            });
 
 
         }]);

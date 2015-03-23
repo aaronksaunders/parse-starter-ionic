@@ -12,7 +12,8 @@
     <ion-content>
         <ion-list can-swipe="true">
             <ion-item class="item item-thumbnail-left" ng-repeat="data in dataList" type="item-text-wrap"
-                      href="#/tab/list/{{data.id}}">
+                      href="#/tab/list/{{$index}}">
+                <pre>{{data | json}}</pre>
                 <ion-option-button class="button-assertive" ng-click="doDeleteRow(data.id)">
                     DELETE
                 </ion-option-button>
