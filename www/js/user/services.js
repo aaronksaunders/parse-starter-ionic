@@ -82,10 +82,8 @@ angular.module('user.services', [])
                     var user = Parse.User.current();
                     if (null !== user) {
                         console.log("logging out user " + user.get("username"));
-                        _callback(Parse.User.logOut());
-                    } else {
-                        _callback({});
                     }
+                    return Parse.User.logOut();
                 }
 
             }
