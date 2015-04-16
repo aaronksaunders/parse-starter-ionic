@@ -22,15 +22,8 @@ angular.module('user.controllers', [])
             $scope.doLogoutAction = function () {
                 UserService.logout()
                     .then(function (_response) {
-                        if (_response.status) {
-                            alert(_response.attributes.username);
-                        } else {
-                            alert("logout success " + _response);
-
-                            // transition to next state
-                            $state.go('app-login');
-
-                        }
+                        // transition to next state
+                        $state.go('app-login');
                     }, function (_error) {
                         alert("error logging in " + _error.debug);
                     })
