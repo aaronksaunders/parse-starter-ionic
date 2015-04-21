@@ -115,6 +115,10 @@ login: function (_user, _password) {
     return Parse.User.logIn(_user, _password);
 },
 ```
+## Using Parse Service in Ionic Framework to Query Data
+I havent integrated a complete example yet, but until then please see this issue for additional information and a code snippet
+https://github.com/aaronksaunders/parse-starter-ionic/issues/1#issuecomment-94958984
+
 ## Links
 * [Complete Source Code For Downloading](https://github.com/aaronksaunders/parse-starter-ionic)
 * [Parse Getting Started](https://parse.com/apps/quickstart#parse_data/web/new)
