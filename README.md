@@ -115,6 +115,36 @@ login: function (_user, _password) {
     return Parse.User.logIn(_user, _password);
 },
 ```
+## Using Parse Service in Ionic Framework to Query Data
+``` Javascript
+var TutorSession = Parse.Object.extend("TutorSession");
+var query = new Parse.Query(TutorSession);
+// get all related objects
+query.include(["user","place","tutor"]);
+query.find({
+  	success: function(_response) {
+    	//console.log("myTutorSession.query: " + JSON.stringify(_response,null,2));
+    	for (var i = 0; i < _response.length; i++) {
+    	  var session = _response[i];
+    	  console.log("user name: " + session.get("user").get("first_name"));
+    	  console.log("location name: " + session.get("place").get("Location"));    
+    	  console.log("tutor name: " + session.get("tutor").get("first_name"));      
+	    }
+  	}
+});
+```
+
+based off of the Parse objects created here:
+
+Screenshot of Users Objects
+![Appcelerator Alloy](https://raw.githubusercontent.com/aaronksaunders/parse-starter-appC/master/images/parse_users.png)
+
+Screenshot of Places Objects
+![Appcelerator Alloy](https://raw.githubusercontent.com/aaronksaunders/parse-starter-appC/master/images/parse_places.png)
+
+Screenshot of Tutor Sessions Objects
+![Appcelerator Alloy](https://raw.githubusercontent.com/aaronksaunders/parse-starter-appC/master/images/parse_tutor_sessions.png)
+
 ## Links
 * [Complete Source Code For Downloading](https://github.com/aaronksaunders/parse-starter-ionic)
 * [Parse Getting Started](https://parse.com/apps/quickstart#parse_data/web/new)
