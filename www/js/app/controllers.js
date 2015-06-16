@@ -19,7 +19,7 @@ angular.module('app.controllers', [])
 
 
             $scope.doLogoutAction = function () {
-                UserService.logout().then(function (_response) {
+                UserService.logout().then(function () {
 
                     // transition to next state
                     $state.go('app-login');
