@@ -79,13 +79,10 @@ angular.module('user.services', [])
                  * @returns {Promise}
                  */
                 logout: function (_callback) {
-                    var user = Parse.User.current();
-                    if (null !== user) {
-                        console.log("logging out user " + user.get("username"));
-                        _callback(Parse.User.logOut());
-                    } else {
-                        _callback({});
-                    }
+                    var defered = $q.defer();
+                    Parse.User.logOut();
+                    defered.resolve();
+                    return defered.promise;
                 }
 
             }

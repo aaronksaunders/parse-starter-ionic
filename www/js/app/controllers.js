@@ -18,6 +18,18 @@ angular.module('app.controllers', [])
             $scope.dataList = ["One", "Two", "Three"];
 
 
+            $scope.doLogoutAction = function () {
+                UserService.logout().then(function (_response) {
+
+                    // transition to next state
+                    $state.go('app-login');
+
+                }, function (_error) {
+                    alert("error logging in " + _error.debug);
+                })
+            };
+
+
         }])
     .controller('AccountCtrl', [
         '$state', '$scope', 'UserService',   // <-- controller dependencies
