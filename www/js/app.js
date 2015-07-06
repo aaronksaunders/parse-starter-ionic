@@ -108,6 +108,7 @@ angular.module('starter',
 
                 // if the error is "noUser" the go to login state
                 if (error && error.error === "noUser") {
+                    event.preventDefault();
                     $state.go('app-login', {});
                 }
             });
