@@ -11,7 +11,7 @@ See the Parse.com website for [Getting Started](https://www.parse.com/apps/quick
 The critical information needed after configuring your application is the `applicationId` and the `javascriptKey` which are needed for the configuration section of the ionic application
 
 <h4>Parse Configuration Screen for Application</h4>
-![http://cl.ly/image/0z2z1x1E1D0B/Image%202015-03-22%20at%209.49.55%20PM.png](http://cl.ly/image/0z2z1x1E1D0B/Image%202015-03-22%20at%209.49.55%20PM.png)
+![https://raw.githubusercontent.com/aaronksaunders/parse-starter-ionic/master/screenshots/Screenshot%202015-07-17%2021.18.41.png](https://raw.githubusercontent.com/aaronksaunders/parse-starter-ionic/master/screenshots/Screenshot%202015-07-17%2021.18.41.png)
 
 Using the values from the Parse Console, set the properties in the app.js file section shown below
 
