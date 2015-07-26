@@ -1,7 +1,20 @@
 #Starter Ionic Application Template with Parse Integration
 ---
+## Update July 26th
+Added the whitelist plugin to project to address issues running on device. You can use the `ionic state restore` command to get the project in the right state or manually install the plugin.
+
+```
+ionic plugin add https://github.com/apache/cordova-plugin-whitelist.git
+```
+
+then update the `confix.xml` file
+
+```
+<allow-navigation href="*" />
+```
+
 ## Overiew
-This sample application is provided as a starter to get your [Ionic Framework](http://ionicframework.com/getting-started/) and [Parse Application](https://parse.com/products/core) up and running easily. Most of the fuss in these applications is figuring out login and account creation... This template solves that for you with a pattern that then can be utilized for a full-blown application; this is not a throw-aways tutorial.
+This sample application is provided as a starter to get your [Ionic Framework](http://ionicframework.com/getting-started/) and [Parse Application](https://parse.com/products/core) up and running easily. Most of the fuss in these applications is figuring out login and account creation... This template solves that for you with a pattern that then can be utilized for a full-blown application; this is not a throw-away tutorial.
 
 We have seperated out the templates, controllers, and services into a format that will be sustainable for your final solution.
 
