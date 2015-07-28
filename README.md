@@ -1,3 +1,5 @@
+[![Book session on Codementor](https://cdn.codementor.io/badges/book_session_github.svg)](https://www.codementor.io/aaronksaunders)
+
 #Starter Ionic Application Template with Parse Integration
 ---
 ## Update July 26th
