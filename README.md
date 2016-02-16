@@ -2,7 +2,9 @@
 
 #Starter Ionic Application Template with Parse Integration
 ---
-## Update July 26th
+## Update Feb 16th 2016
+Parse is going away so there is a new project repo here using Kinvey which has alot of the same features of Parse. Checkout the starter project and share your thoughts. [https://github.com/aaronksaunders/kinvey-starter-ionic/blob/master/README.md](https://github.com/aaronksaunders/kinvey-starter-ionic/blob/master/README.md)
+## Update July 26th 2015
 Added the whitelist plugin to project to address issues running on device. You can use the `ionic state restore` command to get the project in the right state or manually install the plugin.
 
 ```
