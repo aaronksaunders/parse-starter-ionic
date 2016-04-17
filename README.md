@@ -2,6 +2,9 @@
 
 #Starter Ionic Application Template with Parse Integration
 ---
+## Update April 15th 2016
+Parse is going away so there is a new project repo here using Firebase, specifically AngularFire with Ionic2. Checkout the starter project and share your thoughts. [https://github.com/aaronksaunders/ionic2-angularfire-sample](https://github.com/aaronksaunders/ionic2-angularfire-sample)
+
 ## Update Feb 16th 2016
 Parse is going away so there is a new project repo here using Kinvey which has alot of the same features of Parse. Checkout the starter project and share your thoughts. [https://github.com/aaronksaunders/kinvey-starter-ionic/blob/master/README.md](https://github.com/aaronksaunders/kinvey-starter-ionic/blob/master/README.md)
 ## Update July 26th 2015
