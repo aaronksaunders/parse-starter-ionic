@@ -49,7 +49,7 @@ angular.module('starter',
 
             // setup an abstract state for the tabs directive, check for a user
             // object here is the resolve, if there is no user then redirect the
-            // user back to login state on the changeStateError
+            // user back to login state on the stateChangeError
             .state('tab', {
                 url: "/tab",
                 abstract: true,
